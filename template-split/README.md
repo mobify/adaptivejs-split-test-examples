@@ -8,7 +8,7 @@ This folder contains the example code for the dust template level split for Adap
 2. Reference the `split-test` file in the adaptation [config.js - Line 12](adaptation/config.js#L12)
 3. Prepare the dust template variations: [home1](adaptation/templates/home1.dust#L11), [home2](adaptation/templates/home2.dust#L11), [home3](adaptation/templates/home3.dust#L11)
 4. Implement the split in [views/home.js](adaptation/views/home.js)
-5. Prepare the analytic override block [base.js - Line 23](adaptation/templates/base.dust#L23)
+5. Prepare the split analytic overridable block [base.js - Line 23](adaptation/templates/base.dust#L23)
 6. Implement the split test analytic piece in all dust template variations: [home1 - Line 3](adaptation/templates/home1.dust#L3), [home2 - Line 3](adaptation/templates/home2.dust#L3), [home3 - Line 3](adaptation/templates/home3.dust#L3)
 7. Make sure the variation key is also in [views/home.js - Line 28](adaptation/views/home.js#L28)
 
