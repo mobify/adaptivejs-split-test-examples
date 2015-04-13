@@ -2,12 +2,13 @@ define([
     '$',
     'views/base',
     'split-test',
+
+    // Template variations
     'dust!templates/home1',
     'dust!templates/home2',
     'dust!templates/home3'
 ],
-function($, BaseView, SplitTest, home1, home2, home3) {
-    var template;
+function($, BaseView, SplitTest) {
     var splitTest = SplitTest.init({
         'home1': 0.2,
         'home2': 0.6,
@@ -19,16 +20,8 @@ function($, BaseView, SplitTest, home1, home2, home3) {
 
     var choice = splitTest.getChoice();
 
-    if (choice === 'home1') {
-        template = home1;
-    } else if (choice === 'home2') {
-        template = home2;
-    } else {
-        template = home3;
-    }
-
     return {
-        template: template,
+        template: require('dust!templates/' + choice),
         extend: BaseView,
         context: {
             templateName: 'home',

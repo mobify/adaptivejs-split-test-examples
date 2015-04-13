@@ -1,7 +1,7 @@
 node_modules
 bower_components
 localSettings.json
-/build
+*/build
 .sass-cache/
 tmp/
 .idea/
