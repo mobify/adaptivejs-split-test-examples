@@ -33,11 +33,13 @@ var splitTest = SplitTest.init({
 ```
 
 **During develpment**, you can fix the template choices by the following methods:
+
 Fixed the `choice` in [views/home.js](adaptation/views/home.js#L21)
 ```
 var choice = 'home1'; // splitTest.getChoice();
 ```
 **Or**
+
 Changing the cookie setting by deleting the `mobify-split` cookie and set the desire variation by running the following command in the web console.
 ```
 document.cookie = 'mobify-split=home3';
