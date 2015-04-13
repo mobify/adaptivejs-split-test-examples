@@ -10,12 +10,12 @@ define([
 ],
 function($, BaseView, SplitTest) {
     var splitTest = SplitTest.init({
-        'home1': 0.2,
-        'home2': 0.6,
-        'home3': 0.2
+        'home1': 0.2,               // 20% of traffic sees home1 variation
+        'home2': 0.6,               // 60% of traffic sees home2 variation
+        'home3': 0.2                // 20% of traffic sees home3 variation
     }, {
-        namespace: 'mobify',
-        lifetime: 15 * 24 * 3600 // 15 days in seconds
+        namespace: 'mobify',        // make sure we don't have cookie name conflict
+        lifetime: 15 * 24 * 3600    // cookie will expire in 15 days represented in seconds
     });
 
     var choice = splitTest.getChoice();
