@@ -1,0 +1,24 @@
+{
+  "name": "mobifyjs-utils",
+  "version": "1.0.0",
+  "main": "utils.js",
+  "devDependencies": {
+    "requirejs": "2.1.10",
+    "qunit": "1.14.0"
+  },
+  "ignore": [
+    "test",
+    "Gruntfile.js",
+    "*.md"
+  ],
+  "homepage": "https://github.com/mobify/mobifyjs-utils",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "671864cf97e170e8b524cc1fed26a6218b92a307"
+  },
+  "_source": "git://github.com/mobify/mobifyjs-utils.git",
+  "_target": "1.0.0",
+  "_originalSource": "git://github.com/mobify/mobifyjs-utils.git"
+}

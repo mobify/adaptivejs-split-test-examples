@@ -1,0 +1,14 @@
+{
+    "name": "mobifyjs-utils",
+    "version": "1.0.0",
+    "main": "utils.js",
+    "devDependencies": {
+        "requirejs": "2.1.10",
+        "qunit": "1.14.0"
+    },
+    "ignore": [
+        "test",
+        "Gruntfile.js",
+        "*.md"
+    ]
+}

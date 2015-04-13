@@ -1,0 +1,9 @@
+{#footer}
+    <footer class="t-footer" role="contentinfo">
+        <hr>
+        <h3>Documentation</h3>
+        <div>
+            <p>For more in-depth information, including API documentation, please visit our {#documentationLink}<a href="{href}"><b>{text}</b></a>{/documentationLink}</p>
+        </div>
+    </footer>
+{/footer}

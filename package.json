@@ -1,0 +1,21 @@
+{
+    "name": "template-split",
+    "siteUrl": "",
+    "version": "0.0.1",
+    "dependencies": {
+        "adaptivejs": "1.2.0",
+        "connect": "2.3.4",
+        "grunt": "0.4.2",
+        "grunt-concurrent": "0.4.3",
+        "mocha": "1.14.0",
+        "chai": "1.9.0",
+        "mobify-chai-assertions": "^1.0.0",
+        "lodash": "~2.4.1",
+        "grunt-contrib-sass": "0.8.1",
+        "grunt-autoprefixer": "2.0.0",
+        "nightwatch": "0.5.36",
+        "nightwatch-commands": "1.0.0",
+        "grunt-eslint": "^2.1.0",
+        "mobify-code-style": "2.0.1"
+}
+}

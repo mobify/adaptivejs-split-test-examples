@@ -1,0 +1,13 @@
+{
+    "name": "template-split",
+    "version": "1.0.0",
+    "dependencies": {
+        "imageresize": "git://github.com/mobify/imageresize-client.git#1.0.2",
+        "fastclick": "~1.0.3",
+        "deckard": "~1.0.0",
+        "dustjs-linkedin": "2.3.3",
+        "spline": "~1.0",
+        "modularized-normalize-scss": "3.0.2",
+        "zeptojs": "1.1.6"
+}
+}

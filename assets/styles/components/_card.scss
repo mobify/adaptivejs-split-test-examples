@@ -1,0 +1,11 @@
+.c-card {
+    padding: $v-space $h-space*2;
+    margin: $v-space*2 0;
+    border: 1px solid $grey-20;
+
+    background: $grey-10;
+    border-radius: $border-radius;
+    box-shadow: inset 0 1px 4px rgba($grey-20, 0.75);
+
+    font-weight: bold;
+}
