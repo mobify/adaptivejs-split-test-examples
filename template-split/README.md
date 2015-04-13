@@ -2,34 +2,36 @@
 
 This folder contains the example code for the dust template level split for Adaptive.js project.
 
-## Implementation Steps
+## Split Implementation Steps
 
-1. Include `split-test` bower component in [bower.json](bower.json#L12)
-2. Reference the `split-test` file in the adaptation [config.js](adaptation/config.js#L12)
-3. Prepare the dust template variations: [home1](adaptation/templates/home1.dust#L4), [home2](adaptation/templates/home2.dust#L4), [home3](adaptation/templates/home3.dust#L4)
+1. Include `split-test` bower component in [bower.json - Line 12](bower.json#L12)
+2. Reference the `split-test` file in the adaptation [config.js - Line 12](adaptation/config.js#L12)
+3. Prepare the dust template variations: [home1 - Line 11](adaptation/templates/home1.dust#L11), [home2 - Line 11](adaptation/templates/home2.dust#L11), [home3 - Line 11](adaptation/templates/home3.dust#L11)
 4. Implement the split in [views/home.js](adaptation/views/home.js)
+5. Prepare the analytic override block [base.js - Line 23](adaptation/templates/base.dust#L23)
+6. Implement the split test analytic piece in all dust template variations: [home1 - Line 3](adaptation/templates/home1.dust#L3), [home2 - Line 3](adaptation/templates/home2.dust#L3), [home3 - Line 3](adaptation/templates/home3.dust#L3)
+7. Make sure the variation key is also in [views/home.js - Line 28](adaptation/views/home.js#L28)
 
 ## Implementation Notes
 
 In [views/home.js](adaptation/views/home.js) from [Line 7 to Line 9](adaptation/views/home.js#L7), we preload the dust template variations using `define`, so that `require` can find it later using the same file string on [Line 24](adaptation/views/home.js#L24)
 
-[SplitTest.init](adaptation/views/home.js#L12) takes the following parameters:
+[SplitTest.init - Line 12](adaptation/views/home.js#L12) takes the following parameters:
 ```
 SplitTest.init( splitRatios, options);
 ```
 
-`splitRatios` should add up to 1.
+**`splitRatios`** should add up to 1.
 ```
 // Example:
 var splitTest = SplitTest.init({
-    'home1': 0.8,	// 80% of traffic sees home1 variation
-    'home2': 0.2 	// 20% of traffic sees home2 variation
+    'home1': 0.8,				// 80% of traffic sees home1 variation
+    'home2': 0.2 				// 20% of traffic sees home2 variation
 }, {
-    namespace: 'mobify',
-    lifetime: 15 * 24 * 3600 // 15 days in seconds
+    namespace: 'mobify',		// make sure we don't have cookie name conflict
+    lifetime: 15 * 24 * 3600 	// cookie will expire in 15 days represented in seconds
 });
 ```
-`namespace` is to make sure we don't have cookie name conflict
 
 ## Installation
 

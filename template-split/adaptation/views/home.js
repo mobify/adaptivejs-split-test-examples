@@ -25,6 +25,7 @@ function($, BaseView, SplitTest) {
         extend: BaseView,
         context: {
             templateName: 'home',
+            variation: choice,
             firstp: function() {
                 return $('p').first().text() || 'Could not find the first paragraph text in your page';
             }

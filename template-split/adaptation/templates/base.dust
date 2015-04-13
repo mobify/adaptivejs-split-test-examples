@@ -20,6 +20,7 @@
                 (analytics.ua.q = analytics.ua.q || []).push(arguments);
             };
         </script>
+        {+splitAnalytic}{/splitAnalytic}
     {/head}
 </head>
 {body|openTag|s}
