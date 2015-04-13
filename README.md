@@ -1,12 +1,17 @@
-#Split Test Examples
+# A/B (Split) Test Examples
 
-Split testing is a scenario where we want to find out if a certain variation of a page will perform better than another variation.
+A/B testing (sometimes called split testing) is comparing two versions of a web page to see which one performs better. You compare two web pages by showing the two variants (let's call them A and B) to similar visitors at the same time. The one that gives a better conversion rate is then used in favor of the other.
 
-In this repository, we have provided examples of how to do different levels of split test that we may need on adaptive projects.
+It is possible to perform A/B testing at multiple points in Adaptive.js. We've compiled some examples here to help guide you through the different implementations.
+
+## Types of A/B Tests
 
 Below are the different level of splits we can have with example links:
 
-- **Tag level split**: This is when we want to test the difference between different built or mobile verse desktop situations. This does requires a special tag to make this possible.
-- **Router level split**: This is when we want to test the difference between different template built where the selectors between the variations are very different
-- **[Dust Template level split](template-split/README.md)**: This is when we want to test the difference between different template built where the selectors between the variations are very similar, however the dust presentation is very different
-- **UI Script level split**: This is when we want to test the difference between variations where transformation is not possible in the adaptation stage (ie. ajax'ed or script built html)
+
+| A/B Test Type | When to use | Split code location |
+| :---- | :----------- | ------------- |
+| **Tag level split** | When you want to serve different bundle paths | Tag |
+| **Router level split** | When you want to serve different views | Router |
+| **[Template level split](template-split/README.md)** | When you want to serve different templates | View |
+| **UI Script level split** | When you want to serve different variations of feature that are added to the page dynamically (i.e. via AJAX) | UI script |
