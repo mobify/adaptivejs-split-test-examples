@@ -87,7 +87,7 @@ Include the analytic partial dust only in the template variations (example: [hom
 
 ```
 {<splitAnalytic}
-    {>"templates/partials/splitAnalytic"/}
+    {>"templates/partials/_splitAnalytic"/}
 {/splitAnalytic}
 ```
 
