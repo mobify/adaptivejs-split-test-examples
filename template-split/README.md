@@ -190,23 +190,19 @@ This is an example demonstrating how you would perform a split test on the templ
 
 ## Development tips
 
-**During develpment**, you can fix the template choices by the following methods:
-
-Fixed the `choice` in [views/home.js](adaptation/views/home.js#L21)
+If you want to test a specific choice, you can simply hard code the split like so:
 
 ```js
 var choice = 'home1'; // splitTest.getChoice();
 ```
-**Or**
 
-Changing the cookie setting by deleting the `mobify-split` cookie and set the desire variation by running the following command in the web console.
+You can also set the cookie directly simply by deleting the `mobify-split` cookie, and creating a new cookie with a specific value via the console, like so:
 
 ```js
 document.cookie = 'mobify-split=home3';
 ```
 
-
-## Installation
+## Running the example code
 
 To install, first clone the repository:
 
