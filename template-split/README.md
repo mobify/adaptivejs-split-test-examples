@@ -54,26 +54,26 @@ This is an example demonstrating how you would perform a split test on the templ
 
 	```js
 	define([
-    		'$',
-    		'views/base',
-    		'split-test',
-
-    		// Template variations
-    		'dust!templates/home1',
-    		'dust!templates/home2',
-    		'dust!templates/home3'
+	    '$',
+	    'views/base',
+	    'split-test',
+	
+	    // Template variations
+	    'dust!templates/home1',
+	    'dust!templates/home2',
+	    'dust!templates/home3'
 	],
 	function($, BaseView, SplitTest) {
-    		var splitTest = SplitTest.init({
-			'home1': 0.2,               // 20% of traffic sees home1 variation
-        		'home2': 0.6,               // 60% of traffic sees home2 variation
-        		'home3': 0.2                // 20% of traffic sees home3 variation
-    		}, {
-        		namespace: 'mobify',        // make sure we don't have cookie name conflict
-        		lifetime: 15 * 24 * 3600    // cookie will expire in 15 days represented in seconds
-    		});
-
-    		...
+	    var splitTest = SplitTest.init({
+	        'home1': 0.2,               // 20% of traffic sees home1 variation
+	        'home2': 0.6,               // 60% of traffic sees home2 variation
+	        'home3': 0.2                // 20% of traffic sees home3 variation
+	    }, {
+	        namespace: 'mobify',        // make sure we don't have cookie name conflict
+	        lifetime: 15 * 24 * 3600    // cookie will expire in 15 days represented in seconds
+	    });
+	    
+	    ...
 	});
 	```
 
@@ -81,7 +81,7 @@ This is an example demonstrating how you would perform a split test on the templ
 
 	We get the split choice by invoking the `splitTest.getChoice` function. This retrieves the choice from the 	cookie and returns the chosen key.
 
-```js
+	```js
 	define([
 	    '$',
 	    'views/base',
@@ -106,7 +106,7 @@ This is an example demonstrating how you would perform a split test on the templ
 	    
 	    ...
 	});
-```
+	```
 
 1. **Utilize the split choice to get our template**
 
