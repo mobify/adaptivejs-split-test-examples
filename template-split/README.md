@@ -158,13 +158,13 @@ This is an example demonstrating how you would perform a split test on the templ
 	
 1. **Implement analytics tracking for our split test**
 
-Add an overridable block in [base.js](adaptation/templates/base.dust). This block should be placed within the `<body>`. This will allow templates that inherit from base.dust to override this block *if* they need to track the split test. In our case, this would most likely be the three variations of home: home1.dust, home2.dust, and home3.dust.
-
-```
-        {+uiScripts}{/uiScripts}
-    {/scripts}
-    {+splitAnalytics}{/splitAnalytics}
-</body>
+	Add an overridable block in [base.js](adaptation/templates/base.dust). This block should be placed within the `<body>`. This will allow templates that inherit from base.dust to override this block *if* they need to track the split test. In our case, this would most likely be the three variations of home: home1.dust, home2.dust, and home3.dust.
+	
+	```
+	        {+uiScripts}{/uiScripts}
+	    {/scripts}
+	    {+splitAnalytics}{/splitAnalytics}
+	</body>
 ```
 
 1. **Create a split test analytics partial**
@@ -188,6 +188,7 @@ Add an overridable block in [base.js](adaptation/templates/base.dust). This bloc
 	{/splitAnalytics}
 	```
 
+## Development tips
 
 **During develpment**, you can fix the template choices by the following methods:
 
