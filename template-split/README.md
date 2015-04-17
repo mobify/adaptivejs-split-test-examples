@@ -24,9 +24,9 @@ This folder contains the example code for the dust template level split for Adap
 	Adaptive.js uses r.js to compile all our files into a single file. This single file uses 				[Almond](https://github.com/jrburke/almond) to provide AMD loading on an optimized file. Due to 		this, we need to ensure our templates are all pre-loaded, as we won't be able to load templates 		dynamically.
 
 	i.e. 
-	- [home1](adaptation/templates/home1.dust#L4)
-	- [home2](adaptation/templates/home2.dust#L4)
-	- [home3](adaptation/templates/home3.dust#L4)
+	- [home1.dust](adaptation/templates/home1.dust#L4)
+	- [home2.dust](adaptation/templates/home2.dust#L4)
+	- [home3.dust](adaptation/templates/home3.dust#L4)
 
 1. **Implement the split**
 
@@ -172,25 +172,27 @@ Add an overridable block in [base.js](adaptation/templates/base.dust). This bloc
 </body>
 ```
 
-Prepare the analytics partial: [_splitAnalytic.dust](adaptation/templates/partials/_splitAnalytic.dust)
+1. **Create a split test analytics partial**
 
-```
-<script>
-    (function($) {
-        Mobify.analytics.ua('mobifyTracker.set', 'dimension5', '{variation}');
-        Mobify.analytics.ua('mobifyTracker.send', 'event', 'Mobify', 'SplitTest', {'nonInteraction': 1});
-    })(Mobify);
-</script>
-```
-Include the analytic partial dust only in the template variations (example: [home1](adaptation/templates/home1.dust), [home2](adaptation/templates/home2.dust), [home3](adaptation/templates/home3.dust))
+	Create a [partial](adaptation/templates/partials/_splitAnalytics.dust) that makes the analytics calls.
 
-```
-{<splitAnalytic}
-    {>"templates/partials/_splitAnalytic"/}
-{/splitAnalytic}
-```
+	```
+	<script>
+	    (function($) {
+	        Mobify.analytics.ua('mobifyTracker.set', 'dimension5', '{variation}');
+	        Mobify.analytics.ua('mobifyTracker.send', 'event', 'Mobify', 'SplitTest', {'nonInteraction': 1});
+	    })(Mobify);
+	</script>
+	```
 
-And you are done!
+	Add the partial to the three template variations, which will ensure these templates are the only ones 			tracking the variations.
+	
+	```
+	{<splitAnalytics}
+	    {>"templates/partials/_splitAnalytics"/}
+	{/splitAnalytics}
+	```
+
 
 **During develpment**, you can fix the template choices by the following methods:
 
