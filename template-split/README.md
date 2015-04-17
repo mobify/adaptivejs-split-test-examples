@@ -23,28 +23,23 @@ This is an example demonstrating how you would perform a split test on the templ
 	**Hint:**
 	Adaptive.js uses r.js to compile all our files into a single file. This single file uses 				[Almond](https://github.com/jrburke/almond) to provide AMD loading on an optimized file. Due to 		this, we need to ensure our templates are all pre-loaded, as we won't be able to load templates 		dynamically.
 
-	i.e. 
-	- [home1.dust](adaptation/templates/home1.dust#L4)
-	- [home2.dust](adaptation/templates/home2.dust#L4)
-	- [home3.dust](adaptation/templates/home3.dust#L4)
-
 1. **Implement the split**
 
 	Require in the dust template variations.
 
 	```
 	define([
-    		'$',
-    		'views/base',
-    		'split-test',
-
-    		// Template variations
-    		'dust!templates/home1',
-    		'dust!templates/home2',
-	 	'dust!templates/home3'
+	    '$',
+	    'views/base',
+	    'split-test',
+	
+	    // Template variations
+	    'dust!templates/home1',
+	    'dust!templates/home2',
+	    'dust!templates/home3'
 	],
 	function($, BaseView, SplitTest) {
-    		...
+	...
 	});
 	```
 
