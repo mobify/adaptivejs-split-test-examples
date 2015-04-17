@@ -8,13 +8,13 @@ This is an example demonstrating how you would perform a split test on the templ
 
 	Install `split-test` using bower:
 
-	```
+	```cli
 	bower install split-test --save
 	```
 
 	Path out the `split-test` library in the adaptation [config](adaptation/config.js#L12):
 
-	```
+	```cli
 	'split-test': '../bower_components/split-test/src/js/split-test'
 	```
 
@@ -27,7 +27,7 @@ This is an example demonstrating how you would perform a split test on the templ
 
 	Require in the dust template variations.
 
-	```
+	```js
 	define([
 	    '$',
 	    'views/base',
@@ -52,7 +52,7 @@ This is an example demonstrating how you would perform a split test on the templ
 	**Hint**
 	You can utilize the keys of the object to store a value for later use. So, in our case because we are 			choosing between a number of template names, we can store the template name as the key. This will 		save us time and simplify our code when we're retrieving our template later. We'll demonstrate that 		below.
 
-	```
+	```js
 	define([
     		'$',
     		'views/base',
@@ -81,7 +81,7 @@ This is an example demonstrating how you would perform a split test on the templ
 
 	We get the split choice by invoking the `splitTest.getChoice` function. This retrieves the choice from the 	cookie and returns the chosen key.
 
-```
+```js
 	define([
 	    '$',
 	    'views/base',
@@ -114,7 +114,7 @@ This is an example demonstrating how you would perform a split test on the templ
 
 	We also add the choice as a property on our context. This allows us to use it later in the UI when sending 	calls to our analytics.
 
-	```
+	```js
 	define([
 	    '$',
 	    'views/base',
@@ -171,7 +171,7 @@ Add an overridable block in [base.js](adaptation/templates/base.dust). This bloc
 
 	Create a [partial](adaptation/templates/partials/_splitAnalytics.dust) that makes the analytics calls.
 
-	```
+	```html
 	<script>
 	    (function($) {
 	        Mobify.analytics.ua('mobifyTracker.set', 'dimension5', '{variation}');
@@ -193,13 +193,14 @@ Add an overridable block in [base.js](adaptation/templates/base.dust). This bloc
 
 Fixed the `choice` in [views/home.js](adaptation/views/home.js#L21)
 
-```
+```js
 var choice = 'home1'; // splitTest.getChoice();
 ```
 **Or**
 
 Changing the cookie setting by deleting the `mobify-split` cookie and set the desire variation by running the following command in the web console.
-```
+
+```js
 document.cookie = 'mobify-split=home3';
 ```
 
@@ -211,7 +212,9 @@ To install, first clone the repository:
 ```
 git clone https://github.com/<organization>/adaptivejs-split-test-examples.git
 ```
+
 Change folder to `template-split` and install the node modules and the bower components
+
 ```
 npm install
 bower install
@@ -220,4 +223,5 @@ bower install
 ## Running locally
 
 To preview the example, run the following command in the terminal
+
 ```grunt preview```
