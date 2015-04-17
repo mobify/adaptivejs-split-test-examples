@@ -1,6 +1,6 @@
 #Dust Template Level Split
 
-This folder contains the example code for the dust template level split for Adaptive.js project.
+This is an example demonstrating how you would perform a split test on the template level in Adaptive.js. The split is performed in the Adaptive view, and ultimately serves the template chosen by our split test.
 
 ## Implementation
 
