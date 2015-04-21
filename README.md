@@ -12,6 +12,6 @@ Below are the different level of splits we can have with example links:
 | A/B Test Type | When to use | Split code location |
 | :---- | :----------- | ------------- |
 | **Tag level split** | When you want to serve different bundle paths | Tag |
-| **Router level split** | When you want to serve different views | Router |
+| **[Router level split](router-split/README.md)** | When you want to serve different views | Router |
 | **[Template level split](template-split/README.md)** | When you want to serve different templates | View |
 | **UI Script level split** | When you want to serve different variations of feature that are added to the page dynamically (i.e. via AJAX) | UI script |
