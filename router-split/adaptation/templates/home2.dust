@@ -1,0 +1,25 @@
+{>"templates/base"/}
+
+{<contentBlock}
+    <h1>HOME Version 2</h1>
+    <p>We've also extracted the first paragraph from your site and placed it in home.dust:</p>
+    <p class="c-card">
+        {firstp}
+    </p>
+{/contentBlock}
+
+{<uiScripts}
+    <script>
+    // Note: Add any JavaScript that should be run on this page into
+    // assets/js/ui/view-scripts/home.js
+    (function(require) {
+        require(["view-scripts/home"], function(homeUI) {
+            homeUI();
+        });
+    })(Adaptive.AMD.require);
+    </script>
+{/uiScripts}
+
+{<splitAnalytic}
+    {>"templates/partials/_splitAnalytic"/}
+{/splitAnalytic}

@@ -1,0 +1,6 @@
+<script>
+    (function($) {
+        Mobify.analytics.ua('mobifyTracker.set', 'dimension5', '{variation}');
+        Mobify.analytics.ua('mobifyTracker.send', 'event', 'Mobify', 'SplitTest', {'nonInteraction': 1});
+    })(Mobify);
+</script>

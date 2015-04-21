@@ -10,3 +10,4 @@ reports
 build.tar
 .bundle
 ${CIRCLE_TEST_REPORTS}/
+Gemfile.lock
