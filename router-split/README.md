@@ -18,10 +18,10 @@ This is an example demonstrating how you would perform a split test on the route
 	'split-test': '../bower_components/split-test/src/js/split-test'
 	```
 
-	Because we'll be split testing against different templates, we'll want to require them all into the view 		via the view's `define` call. This will allow us to be able to call them later using the `require` 		function.
+	Because we'll be split testing against different views, we'll want to require them all into the router 		via the router's `define` call. This will allow us to be able to call them later using the `require` 		function.
 
 	**Hint:**
-	Adaptive.js uses r.js to compile all our files into a single file. This single file uses 				[Almond](https://github.com/jrburke/almond) to provide AMD loading on an optimized file. Due to 		this, we need to ensure our templates are all pre-loaded, as we won't be able to load templates 		dynamically.
+	Adaptive.js uses r.js to compile all our files into a single file. This single file uses 				[Almond](https://github.com/jrburke/almond) to provide AMD loading on an optimized file. Due to 		this, we need to ensure our views are all pre-loaded, as we won't be able to load views 		dynamically.
 
 1. **Implement the split**
 
