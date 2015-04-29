@@ -14,4 +14,4 @@ Below are the different level of splits we can have with example links:
 | **Tag level split** | When you want to serve different bundle paths | Tag |
 | **[Router level split](router-split/README.md)** | When you want to serve different views | Router |
 | **[Template level split](template-split/README.md)** | When you want to serve different templates | View |
-| **UI Script level split** | When you want to serve different variations of feature that are added to the page dynamically (i.e. via AJAX) | UI script |
+| **[UI Script level split](ui-split/README.md)** | When you want to serve different variations of feature that are added to the page dynamically (i.e. via AJAX) | UI script |
