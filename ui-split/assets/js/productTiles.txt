@@ -1,0 +1,8 @@
+<ul>
+	<li>Product Categroy A</li>
+	<li>Product Categroy B</li>
+	<li>Product Categroy C</li>
+	<li>Product Categroy D</li>
+	<li>Product Categroy E</li>
+	<li>Product Categroy F</li>
+</ul>

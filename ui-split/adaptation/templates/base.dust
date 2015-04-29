@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{html|openTag|s}
+{head|openTag|s}
+    {config.adaptiveBuildScript}{! Re-inserts Adaptive.js into page. Do not modify or remove!}
+    {+head}
+        {head|innerHTML|s}
+
+        {+style}
+            <link rel="stylesheet" type="text/css" href="{@getUrl path="css/stylesheet.css" /}" />
+        {/style}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        {! Do not modify or remove the following Mobify Analytics script tags: !}
+        {config.ajs|s}
+        <script>
+            var analytics = Mobify.analytics = Mobify.analytics || {};
+            analytics.ga = analytics.ga || [];
+            analytics.ua = analytics.ua || function() {
+                (analytics.ua.q = analytics.ua.q || []).push(arguments);
+            };
+        </script>
+    {/head}
+</head>
+{body|openTag|s}
+    {+bodyBlock}
+        <div id="x-root" class="t-{templateName}">
+
+            {>"templates/partials/_header"/}
+
+            <main class="t-main" role="main">
+                {+contentBlock}
+                    {body|innerHTML|s}
+                {/contentBlock}
+            </main>
+
+            {>"templates/partials/_footer"/}
+        </div>
+    {/bodyBlock}
+    {+scripts}
+        {desktopScripts}
+
+        {! Site UI scripts !}
+        {?config.isDebug}
+            <script src="{@getUrl path="js/ui.js" /}"></script>
+        {:else}
+            <script src="{@getUrl path="js/ui.min.js" /}"></script>
+        {/config.isDebug}
+
+        {+uiScripts}{/uiScripts}
+    {/scripts}
+</body>
+</html>

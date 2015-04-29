@@ -1,0 +1,34 @@
+.t-home {
+    padding: $v-space $h-space;
+
+    font-size: $font-size;
+    color: $font-color;
+    text-align: center;
+    
+    p {
+        margin: $v-space 0;
+    }
+
+    .c-product-tiles {
+    	&.c--tile {
+    		li {
+    			display: inline-block;
+    			
+    			width: 46%;
+				margin: 5px;
+				padding: 5px;
+				
+				border: 1px solid red;
+    		}
+    	}
+
+    	&.c--list {
+    		li {
+				margin: 5px;
+				padding: 5px;
+				
+    			border: 1px solid blue;
+    		}
+    	}
+    }
+}

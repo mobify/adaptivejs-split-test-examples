@@ -1,0 +1,9 @@
+{#header}
+    <header class="t-header" role="banner">
+        <h1>Welcome to your Adaptive.js site</h1>
+        <p>As an initial example of content selection, we've selected the title of your site and placed it in _header.dust:</p>
+        <p class="c-card">
+            {title}
+        </p>
+    </header>
+{/header}

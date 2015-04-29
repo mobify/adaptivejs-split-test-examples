@@ -1,0 +1,26 @@
+// TABLES
+// ======
+
+table {
+    width: 100%;
+    margin: $v-space 0;
+    border-collapse: collapse;
+}
+
+th {
+    padding: $v-space 0;
+    border-bottom: 1px solid darken($border-color, 15%);
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    padding: $v-space 0;
+    border-bottom: 1px solid $border-color;
+}
+
+tr,
+td,
+th {
+    vertical-align: middle;
+}
