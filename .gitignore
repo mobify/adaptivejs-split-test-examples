@@ -11,3 +11,4 @@ build.tar
 .bundle
 ${CIRCLE_TEST_REPORTS}/
 Gemfile.lock
+tag-split/public/js/*.min.js
