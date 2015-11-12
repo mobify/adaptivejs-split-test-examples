@@ -11,6 +11,10 @@ This is an example demonstrating how you would perform a split test on the templ
 	```cli
 	bower install split-test --save
 	```
+    may have to call the split test specificly instead
+    ```cli 
+    bower install git@github.com:mobify/split-test.git --save
+    ```
 
 	Path out the `split-test` library in the adaptation [config](adaptation/config.js#L12):
 
